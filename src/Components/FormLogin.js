@@ -1,16 +1,45 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import { Form, Input,  Button, Checkbox  } from 'antd';
 
-import { Form, Input, Button, Checkbox } from 'antd';
 
 
 
 function LoginForm(){
 
 
+const storeCollector=()=>
+{
+  let store=JSON.parse(localStorage.getItem('login'));
+  if(store && store.login)
+  {
+    this.setState({login:true,store:store})
+  }
+}
+
+const login=()=>
+{
+  fetch('',{
+   method:"POST" ,
+   body:JSON.stringify(this.state)
+  }).then((response)=>{
+    response.json().then((result)=>{
+      console.warn("result",result);
+      localStorage.setItem('login',JSON.stringify({
+        login:true,
+        token:result.token
+      }))
+      storeCollector()
+    })
+  })
+};
+
   
     return (
-        <Form
+      
+      
+
+      <Form
         name="basic"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
@@ -21,7 +50,7 @@ function LoginForm(){
           name="email"
           rules={[{ required: true, message: 'Please input your email!' }]}
         >
-          <Input />
+          <Input onChange={(event)=>{this.setState({email:event.target.value})}}/>
         </Form.Item>
   
         <Form.Item
@@ -29,7 +58,7 @@ function LoginForm(){
           name="password"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <Input.Password />
+          <Input.Password type="password" onChange={(event)=>{this.setState({email:event.target.value})}}/>
         </Form.Item>
   
         <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
@@ -37,13 +66,21 @@ function LoginForm(){
         </Form.Item>
   
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" onClick={()=>{login()}}>
+          
             Submit
           </Button>
         </Form.Item>
       </Form>
+
+
+
+
+
+      
     );
   };
 
- 
+
+
   export default LoginForm;

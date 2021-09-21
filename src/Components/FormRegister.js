@@ -1,4 +1,4 @@
-import { Form, Input, InputNumber, Button } from 'antd';
+import { Form, Input,  Button } from 'antd';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router';
 
@@ -8,10 +8,7 @@ import { useHistory } from 'react-router';
 
 
 function FormRegister(){
-const handleSubmit=(e)=>{
-  e.preventDefault();
- 
-}
+
 
 const [userName, setUserName] = useState('');
 const [email, setEmail] = useState('');
@@ -27,8 +24,11 @@ const addUser = (data) => {
       method:"POST",
       body:JSON.stringify(data)
   }
+/*url oluşturulacak.... */
+
   fetch('http://localhost:8000',requestOptions)
   .then(()=>{alert('User register...')})
+  history.push('/App')
 }
 const add = () => {
   let newUser = {
@@ -43,7 +43,7 @@ const add = () => {
 
 return(
 
-<Form  name="nest-messages" onSubmit={handleSubmit}>
+<Form  name="nest-messages" onSubmit={add}>
       <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
         <Input value={userName} onChange={(e)=>setUserName(e.target.value)} />
       </Form.Item>
