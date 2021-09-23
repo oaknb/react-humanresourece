@@ -4,7 +4,6 @@ import { Form, Input,  Button, Checkbox  } from 'antd';
 
 
 
-
 function LoginForm(){
 
 
@@ -34,6 +33,7 @@ const login=()=>
   })
 };
 
+
   
     return (
       
@@ -50,7 +50,7 @@ const login=()=>
           name="email"
           rules={[{ required: true, message: 'Please input your email!' }]}
         >
-          <Input onChange={(event)=>{this.setState({email:event.target.value})}}/>
+          <Input type="email" placeholder="Email" onChange={(event)=>{this.setState({email:event.target.value})}}/>
         </Form.Item>
   
         <Form.Item
@@ -58,7 +58,7 @@ const login=()=>
           name="password"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <Input.Password type="password" onChange={(event)=>{this.setState({email:event.target.value})}}/>
+          <Input.Password  type="password" placeholder="Password"  onChange={(event)=>{this.setState({email:event.target.value})}}/>
         </Form.Item>
   
         <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
@@ -72,15 +72,6 @@ const login=()=>
           </Button>
         </Form.Item>
       </Form>
-
-
-
-
-
-      
     );
   };
-
-
-
   export default LoginForm;

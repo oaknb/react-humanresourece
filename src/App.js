@@ -1,19 +1,46 @@
+import React from "react";
+import {
+  BrowserRouter ,
+  Switch,
+  Route,
+  
+  
+} from "react-router-dom"; 
 
 import './App.css';
-import ModalLogin from './Components/ModalLogin';
-import ModalRegister from './Components/ModalRegister';
 
+import Home from './Pages/Home';
+
+import 'antd/dist/antd.css';
+
+
+
+import ManagementHome from "./Pages/ManagementHome";
 
 
 
 
 function App() {
   return (
-    <div className="App">
-     <ModalLogin></ModalLogin>
-    <ModalRegister></ModalRegister>
+    <>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/'>
+          <Home></Home>
+        </Route>
+        <Route path='/managementhome'>
+          <ManagementHome></ManagementHome>
+        </Route>
+        
+      </Switch>
+    
+    
+    </BrowserRouter>
 
-    </div>
+
+
+   
+    </>
   );
 }
 
