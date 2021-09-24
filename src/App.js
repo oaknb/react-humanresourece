@@ -16,6 +16,9 @@ import 'antd/dist/antd.css';
 
 
 import ManagementHome from "./Pages/ManagementHome";
+import Deneme2 from "./Components/deneme2";
+
+
 
 
 
@@ -31,6 +34,7 @@ function App() {
         <Route path='/managementhome'>
           <ManagementHome></ManagementHome>
         </Route>
+        
         
       </Switch>
     

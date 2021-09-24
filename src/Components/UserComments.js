@@ -1,35 +1,76 @@
-import React from 'react'
-import 'antd/dist/antd.css';
+import React from "react";
+import { Carousel, Row,Col,  Image} from 'antd';
 
-
+import Container from '@mui/material/Container';
 
 
 function UserComments() {
+
+ 
+
     return (
-      <figure class="md:flex bg-gray-100 rounded-xl p-8 md:p-0">
-  cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-    <blockquote>
-      <p class="text-lg font-semibold">
-        “Tailwind CSS is the only framework that I've seen scale
-        on large teams. It’s easy to customize, adapts to any design,
-        and the build size is tiny.”
-      </p>
-    </blockquote>
-    <figcaption class="font-medium">
-      <div class="text-cyan-600">
-        Sarah Dayan
-      </div>
-      <div class="text-gray-500">
-        Staff Engineer, Algolia
-      </div>
-    </figcaption>
+    
+      
+      <Container fixed>
+<div style={{height:'450px', flexDirection: "column-reverse"}}>
+<Carousel autoplay effect="fade" style={{height:'200px', color:'#fff', lineHeight:'220px',textAlign: 'left',background: '#d8d8d8'}}>
+    <div>
+    <Row> <Col span={18} push={6}>
+   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+</Col>
+<Col span={6} pull={18}>
+       <Image
+      width={200}
+      src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+    />
+    </Col>
+    </Row>
+    </div>
+    <div>
+    <Row> <Col span={18} push={6}>
+   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+</Col>
+<Col span={6} pull={18}>
+       <Image
+      width={200}
+      src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+    />
+    </Col>
+    </Row>
+    </div>
+    <div>
+    <Row>
+    <Col span={18} push={6}>
+   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+</Col>
+<Col span={6} pull={18}>
+       <Image
+      width={200}
+      src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+    />
+    </Col>
+    </Row>
+    
+    </div>
+    <div>
+    <Row>
+    <Col span={18} push={6}>
+   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+</Col>
+<Col span={6} pull={18}>
+       <Image
+      width={200}
+      src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+    />
+    </Col>
+    </Row>
+    </div>
+  </Carousel>
   </div>
-</figure>
-
-
-       
+  </Container>
+    
+ 
     )
 }
 
-export default UserComments
+export default UserComments;
