@@ -1,5 +1,6 @@
 import { Form, Input, Button } from 'antd';
 import React, { useState } from 'react'
+import { apiUrl } from '../env/config';
 // import { useHistory } from 'react-router';
 
 function FormRegister() {
@@ -20,7 +21,7 @@ function FormRegister() {
     }
     /*apiUrl için env oluşturulacak. Loading gifi veya yazı dönecek fetch lerden önce.. */
 
-    fetch('https://localhost:44360/api/User/register', requestOptions)
+    fetch(apiUrl+'/api/User/register', requestOptions)
       .then((res) =>{ 
         if (res.status === 200){alert('User successfully registered');} //alertler yerine janti not kutucukları gelip gidecek
         else if (res.status === 400) {alert('Registration failed');}

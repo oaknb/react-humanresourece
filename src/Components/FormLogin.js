@@ -79,6 +79,9 @@ const login=()=>
   import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import { Form, Input, Button, Checkbox } from 'antd';
+import { apiUrl } from '../env/config';
+
+
 
 function LoginForm() {
 
@@ -104,7 +107,7 @@ function LoginForm() {
     }
 
     
-    fetch('https://localhost:44360/api/User/getToken', requestOptions)
+    fetch(apiUrl+'/api/User/getToken', requestOptions)
       .then((res) => {
         res.json()
           .then((result) => {
@@ -128,7 +131,7 @@ function LoginForm() {
             },
             method: "GET"
           }
-          fetch('https://localhost:44360/api/User/getFruitsAuthenticated', requestOptionstoken)
+          fetch(apiUrl+'/api/User/getFruitsAuthenticated', requestOptionstoken)
           .then((res) => {
             res.json()
               .then((data) => {
