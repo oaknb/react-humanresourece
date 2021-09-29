@@ -80,6 +80,8 @@ const login=()=>
 import 'antd/dist/antd.css';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { apiUrl } from '../env/config';
+import { useHistory } from 'react-router';
+
 
 
 
@@ -87,6 +89,7 @@ function LoginForm() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+const history = useHistory();
 
   const createLogInDTO = () => {
     let logInDTO = {
@@ -115,6 +118,7 @@ function LoginForm() {
             let bearerStr = "Bearer ";
             localStorage.setItem('token',JSON.stringify(bearerStr+result.token));
             getfruitsaut();
+            history.push('/managementhome')
           });
         })
 
