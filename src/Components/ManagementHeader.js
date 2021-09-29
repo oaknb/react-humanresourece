@@ -1,18 +1,21 @@
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Breadcrumb } from 'antd';
 import {
     DesktopOutlined,
     PieChartOutlined,
     FileOutlined,
     TeamOutlined,
     UserOutlined,
+    
+    
   } from '@ant-design/icons';
+import ManagementGroupDesing from './ManagementGroupDesing';
 
 
 
 function ManagementHeader(){
 
 
-    const {   Sider } = Layout;
+    const {   Sider, Content } = Layout;
     const { SubMenu } = Menu;
     
     
@@ -45,7 +48,15 @@ function ManagementHeader(){
           </Menu>
         </Sider>
         <Layout className="site-layout">
-        
+        <Content style={{ margin: '0 16px' }}>
+        <Breadcrumb style={{ margin: '16px 0', textAlign:'right' }}>
+              <Breadcrumb.Item>User</Breadcrumb.Item>
+              <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            </Breadcrumb>
+            <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+              <ManagementGroupDesing></ManagementGroupDesing>
+            </div>
+          </Content>
           
             
         </Layout>

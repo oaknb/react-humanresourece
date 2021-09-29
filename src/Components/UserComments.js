@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Row,Col,  Image} from 'antd';
+import { Carousel, Row,Col,  Image, Button} from 'antd';
 
 import Container from '@mui/material/Container';
 
@@ -13,14 +13,16 @@ function UserComments() {
       
       <Container fixed>
 <div style={{height:'450px', flexDirection: "column-reverse"}}>
-<Carousel autoplay effect="fade" style={{height:'200px', color:'#fff', lineHeight:'220px',textAlign: 'left',background: '#d8d8d8'}}>
+<Carousel autoplay effect="fade" style={{height:'300px', color:'#fff', lineHeight:'220px',textAlign: 'left',background: '#2F4F4F'}}>
     <div>
     <Row> <Col span={18} push={6}>
-   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+    
+    <div style={{textAlign:'justify', marginLeft:'30px'}}>Afdshfsdhgfshshfshgfbshshfsghsfghsf </div>
+   <Button style={{right:'0px',bottom:'105px', position:'absolute'}}>Read me</Button>
 </Col>
 <Col span={6} pull={18}>
        <Image
-      width={200}
+      width={300}
       src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
     />
     </Col>
@@ -28,11 +30,12 @@ function UserComments() {
     </div>
     <div>
     <Row> <Col span={18} push={6}>
-   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+   <div style={{textAlign:'justify', marginLeft:'30px'}}>Aadafdgfadfgadfda</div>
+   <Button style={{right:'0px',bottom:'105px', position:'absolute'}}>Read me</Button>
 </Col>
 <Col span={6} pull={18}>
        <Image
-      width={200}
+      width={300}
       src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
     />
     </Col>
@@ -41,11 +44,12 @@ function UserComments() {
     <div>
     <Row>
     <Col span={18} push={6}>
-   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+    <div style={{textAlign:'justify', marginLeft:'30px'}}>Aadafdgfadfgadfda</div>
+   <Button style={{right:'0px',bottom:'105px', position:'absolute'}}>Read me</Button>
 </Col>
 <Col span={6} pull={18}>
        <Image
-      width={200}
+      width={300}
       src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
     />
     </Col>
@@ -55,11 +59,12 @@ function UserComments() {
     <div>
     <Row>
     <Col span={18} push={6}>
-   <div style={{textAlign:'justify'}}>aadafdgfadfgadfda</div>
+    <div style={{textAlign:'justify', marginLeft:'30px'}}>Aadafdgfadfgadfda</div>
+   <Button style={{right:'0px',bottom:'105px', position:'absolute'}}>Read me</Button>
 </Col>
 <Col span={6} pull={18}>
        <Image
-      width={200}
+      width={300}
       src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
     />
     </Col>
