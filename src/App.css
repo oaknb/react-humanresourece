@@ -2,6 +2,81 @@
   text-align: center;
 }
 
-.header{
-  background-color: yellow;
+
+
+.header {
+  
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: white;
 }
+
+.header-top {
+  display: flex;
+  width: 100%;
+  height: 80px;
+}
+
+.header-top__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.header-top__logoo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.header-logo {
+  color: inherit;
+  text-decoration: grey;
+  font-family: RobotoThin;
+  font-size: 50px;
+}
+
+.header-top__navbar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.header-top__seperator {
+  width: 100%;
+  border: none;
+  height: 2px;
+  margin-top: 2px;
+  background-color: black;
+}
+.home-top__seperator {
+  width: 100%;
+  border: none;
+  height: 2px;
+  margin-top: 50px;
+  background-color: black;
+}
+
+.header-top__Login {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 55px;
+  margin-top: 25px;
+}
+
+.header-bottom {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 6px;
+}
+
+

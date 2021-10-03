@@ -12,6 +12,7 @@ import ManagementGroupDesing from './ManagementGroupDesing';
 
 
 
+
 function ManagementHeader(){
 
 
@@ -26,6 +27,7 @@ function ManagementHeader(){
         <Layout style={{ minHeight: '100vh' }}>
         <Sider >
           <div className="logo" />
+          
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" icon={<PieChartOutlined />}>
               Option 1
@@ -45,6 +47,7 @@ function ManagementHeader(){
             <Menu.Item key="9" icon={<FileOutlined />}>
               Files
             </Menu.Item>
+            
           </Menu>
         </Sider>
         <Layout className="site-layout">
