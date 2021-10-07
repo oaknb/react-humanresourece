@@ -3,25 +3,13 @@ import {
   BrowserRouter ,
   Switch,
   Route,
-  
-  
 } from "react-router-dom"; 
-
 import './App.css';
-
 import Home from './Pages/Home';
-
 import 'antd/dist/antd.css';
-
-
-
 import ManagementHome from "./Pages/ManagementHome";
 import UserChart from "./Components/UserChart";
-
-
-
-
-
+import PersonelHome from "./Pages/PersonelHome";
 
 
 
@@ -38,6 +26,9 @@ function App() {
         </Route>
         <Route path='/management'>
           <UserChart></UserChart>
+        </Route>
+        <Route path='/personel'>
+         <PersonelHome></PersonelHome>
         </Route>
         
       </Switch>

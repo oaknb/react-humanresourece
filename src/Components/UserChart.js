@@ -5,6 +5,8 @@ function UserChart() {
     
   
     return (
+      <div className="featured" style={{marginTop:'25px'}}>
+      <div className="featuredItem">
       <Chart
   width={300}
   chartType="PieChart"
@@ -30,7 +32,8 @@ function UserChart() {
   chartWrapperParams={{ view: { columns: [0, 3] } }}
   chartPackages={['corechart', 'controls']}
   
-/>
+/></div>
+  </div>
     )
 }
 

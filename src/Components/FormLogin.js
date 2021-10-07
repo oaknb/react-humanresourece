@@ -81,7 +81,7 @@ import 'antd/dist/antd.css';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { apiUrl } from '../env/config';
 import { useHistory } from 'react-router';
-import Item from 'antd/lib/list/Item';
+
 
 
 
@@ -90,7 +90,8 @@ function LoginForm() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
- 
+  
+
 const history = useHistory();
 
   const createLogInDTO = () => {
@@ -100,6 +101,7 @@ const history = useHistory();
     }
     login(logInDTO);
   }
+ 
 
   const login = (data) => {
     let requestOptions = {
@@ -110,7 +112,7 @@ const history = useHistory();
       method: "POST",
       body: JSON.stringify(data)
     }
-
+   
     
     fetch(apiUrl+'/api/User/getToken', requestOptions)
       .then((res) => {
@@ -126,6 +128,7 @@ const history = useHistory();
             
           });
         })
+       
 
         const getfruitsaut = () => {
 
@@ -150,6 +153,7 @@ const history = useHistory();
         }
 
       }
+     
   
 
   return (
