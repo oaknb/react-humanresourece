@@ -10,6 +10,8 @@ import 'antd/dist/antd.css';
 import ManagementHome from "./Pages/ManagementHome";
 import UserChart from "./Components/UserChart";
 import PersonelHome from "./Pages/PersonelHome";
+import Adminpanel from "./Pages/Adminpanel";
+import MailControls from "./Components/MailControl";
 
 
 
@@ -29,6 +31,12 @@ function App() {
         </Route>
         <Route path='/personel'>
          <PersonelHome></PersonelHome>
+        </Route>
+        <Route path='/admin'>
+         <Adminpanel></Adminpanel>
+        </Route>
+        <Route path='/control'>
+         <MailControls></MailControls>
         </Route>
         
       </Switch>

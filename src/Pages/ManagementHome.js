@@ -1,6 +1,6 @@
-
 import React from 'react'
 import MyFooter from '../Components/Footer'
+import Calendarr from '../Components/Calendarr'
 
 import ManagementHeader from '../Components/ManagementHeader'
 import ManagementTopbar from '../Components/ManagementTopbar'
@@ -16,7 +16,7 @@ function ManagementHome() {
         <div className="others">
             <TotalUsers></TotalUsers>
             <UserChart></UserChart>
-
+            <Calendarr></Calendarr>
         </div>
         </div>
 
