@@ -25,6 +25,7 @@ function FormRegister() {
       .then((res) =>{ 
         if (res.status === 200){alert('User successfully registered');} //alertler yerine janti not kutucukları gelip gidecek
         else if (res.status === 400) {alert('Registration failed');}
+        else if (res.status === 500) {alert('500 error');}
       })
     // history.push(ModalLogin) ...   Routing yapılacak !!!
     // Password validation veya diğer validationlar front end e alınacak !! Rule'lar neymiş bulunacak ?!

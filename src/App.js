@@ -12,6 +12,7 @@ import UserChart from "./Components/UserChart";
 import PersonelHome from "./Pages/PersonelHome";
 import Adminpanel from "./Pages/Adminpanel";
 import MailControls from "./Components/MailControl";
+import MailError from "./Components/MailError";
 
 
 
@@ -38,7 +39,11 @@ function App() {
         <Route path='/control'>
          <MailControls></MailControls>
         </Route>
+        <Route path='/mailerror'>
+         <MailError></MailError>
+        </Route>
         
+
       </Switch>
     
     

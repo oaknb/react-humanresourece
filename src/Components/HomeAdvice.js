@@ -13,7 +13,7 @@ function HomeAdvice() {
       <Col span={8}>
       <Card
     hoverable
-    style={{ width: 240 }}
+    style={{ width: 290 }}
     cover={<img alt="example" src={Security} />}
   >
     <h3 style={{textAlign:'center'}}>Reliability</h3>
@@ -24,7 +24,7 @@ function HomeAdvice() {
       <Col span={8}>
       <Card
     hoverable
-    style={{ width: 240 }}
+    style={{ width: 290 }}
     cover={<img alt="example" src={Satisfaction} />}
   >
     <h3 style={{textAlign:'center'}}>Customer happiness</h3>
@@ -35,7 +35,7 @@ function HomeAdvice() {
       <Col span={8}>
       <Card
     hoverable
-    style={{ width: 240 }}
+    style={{ width: 290 }}
     cover={<img alt="example" src={innovation} />}
   >
     <h3 style={{textAlign:'center'}}>Innovation</h3>
